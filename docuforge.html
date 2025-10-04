@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DocuForge.co.uk — For Sale</title>
+  <meta name="description" content="DocuForge.co.uk is available to buy. Register your interest below." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #151925;
+      --text: #e9edf5;
+      --muted: #a7b1c2;
+      --accent: #6f42c1;
+      --accent-2: #667eea;
+      --accent-3: #764ba2;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(118,75,162,.25), transparent 60%),
+                  radial-gradient(1200px 800px at 120% 110%, rgba(102,126,234,.2), transparent 60%),
+                  var(--bg);
+      display: grid;
+      place-items: center;
+      padding: 32px 16px;
+    }
+    .wrap { width: 100%; max-width: 780px; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.45);
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .logo {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2) 50%, var(--accent-3));
+      display: grid; place-items: center; font-weight: 700; color: white;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 6px 16px rgba(111,66,193,.4);
+    }
+    h1 { font-size: 28px; line-height: 1.2; margin: 0; letter-spacing: .2px; }
+    p.lead { color: var(--muted); margin: 6px 0 22px; }
+
+    form { display: grid; gap: 14px; margin-top: 8px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+
+    label { font-size: 14px; color: var(--muted); margin-bottom: 6px; display: block; }
+    input, textarea {
+      width: 100%;
+      padding: 14px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: #0f1320;
+      color: var(--text);
+      outline: none;
+    }
+    input:focus, textarea:focus { border-color: rgba(102,126,234,.65); box-shadow: 0 0 0 4px rgba(102,126,234,.17); }
+    textarea { min-height: 120px; resize: vertical; }
+
+    .actions { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; margin-top: 6px; }
+    .btn {
+      appearance: none; border: none; cursor: pointer; font-weight: 600;
+      padding: 12px 18px; border-radius: 12px; color: white; letter-spacing: .2px; font-size: 15px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2) 60%, var(--accent-3));
+      box-shadow: 0 10px 24px rgba(102,126,234,.35), inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .btn:active { transform: translateY(1px); }
+
+    .notice { font-size: 12px; color: var(--muted); margin-top: 8px; }
+    .footer { text-align: center; margin-top: 18px; color: var(--muted); font-size: 12px; }
+    .hide { display:none !important; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">DF</div>
+        <div>
+          <h1>DocuForge.co.uk — For&nbsp;Sale</h1>
+          <p class="lead">This premium domain is available to buy. Contact us below if you're interested in purchasing or would like to make an offer.</p>
+        </div>
+      </div>
+
+      <form action="https://formsubmit.co/sales@distex.co.uk" method="POST" autocomplete="on">
+        <input type="hidden" name="_subject" value="DocuForge.co.uk — Buyer enquiry" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" class="hide" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="_captcha" value="true" />
+
+        <div class="row">
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Smith" required />
+          </div>
+          <div>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us your offer, intended use, and any questions…" required></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Send enquiry</button>
+        </div>
+
+        <p class="notice">By submitting, you consent to be contacted about the sale of DocuForge.co.uk. We don’t share your details with third parties.</p>
+      </form>
+    </section>
+    <p class="footer">© <span id="year"></span> DocuForge.co.uk</p>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
